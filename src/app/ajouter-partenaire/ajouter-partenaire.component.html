@@ -1,3 +1,72 @@
-<p>
-  ajouter-partenaire works!
-</p>
+<section class="forms">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header d-flex align-items-center">
+            <h4>AJOUTER UN PARTENAIRE</h4>
+          </div>
+          <div class="card-body">
+            <form class="form-horizontal" #imageForm=ngForm
+              (ngSubmit)="OnSubmit(username,prenom,nom,image,adresse,email,telephone,raisonSociale,ninea,password)">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group-material">
+                    <input #prenom type="text" name="prenom" required class="input-material" id="prenom" ngModel>
+                    <label for="register-prenom" class="label-material">Prénom</label>
+                  </div>
+                  <div class="form-group-material">
+                    <input #raisonSociale type="text" name="raisonSociale" required class="input-material" ngModel>
+                    <label for="register-raisonSociale" class="label-material">Raison Sociale</label>
+                  </div>
+                  <div class="form-group-material">
+                    <input #username type="text" name="username" required class="input-material" ngModel>
+                    <label for="register-username" class="label-material">Username</label>
+                  </div>
+                  <div class="form-group-material">
+                    <input #adresse type="mail" name="adresse" required class="input-material" ngModel>
+                    <label for="register-adresse" class="label-material">Adresse</label>
+                  </div>
+
+                  <div class="form-group-material">
+                    <input #email type="text" name="email" required class="input-material" ngModel>
+                    <label for="register-email" class="label-material">Email</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group-material">
+                    <input #nom type="text" name="nom" required class="input-material" ngModel>
+                    <label for="register-nom" class="label-material">Nom</label>
+                  </div>
+                  <div class="form-group-material">
+                    <input #ninea type="text" name="ninea" required class="input-material" ngModel>
+                    <label for="register-ninea" class="label-material">Ninea</label>
+                  </div>
+                  <div class="form-group-material">
+                    <input #telephone type="text" name="telephone" required class="input-material" ngModel>
+                    <label for="register-telephone" class="label-material">Téléphone</label>
+                  </div>
+                  <div class="form-group-material">
+                    <input #password type="text" name="password" required class="input-material" ngModel>
+                    <label for="register-password" class="label-material">Password</label>
+                  </div>
+                  <div class="form-group-material">
+                    <img [src]="imageUrl" style="width:250px;height:200px">
+                    <input type="file" #image accept="image/*" (change)="handleFileInput($event.target.files)" required
+                      class="input-material" ngModel>
+                    <label for="register-image" class="label-material">Photo</label>
+                  </div>
+                </div>
+
+                <div class="form-group-material">
+                  <button type="submit" class="btn btn-primary"
+                    [disabled]="image.value=='' || !imageForm.valid">Ajouter</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

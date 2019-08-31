@@ -16,20 +16,23 @@ export class LoginService {
     return this.http.post<any>(this.host1+'/api/login_check',data,{observe:'response'});
   }
 
-    saveJwtToken(jwt:string){
-       localStorage.setItem('token', jwt);
-       this.jwt = jwt;
-       this.parsejwt(jwt);
-    }
-   
-    
-    parsejwt(token:any){
+  parsejwt(token:any){
     const jwtHelper=new JwtHelperService();
     //const objJwt =jwtHelper.decodeToken(this.jwt);
     return jwtHelper.decodeToken(token);
     //this.roles=objJwt.roles;
     }
 
+
+    saveJwtToken(jwt:string){
+       localStorage.setItem('token', jwt);
+     
+       this.jwt = jwt;
+       this.parsejwt(jwt);
+    }
+   
+    
+   
 
     
     isAdmin(){

@@ -1,5 +1,51 @@
-<ul>
-  <li *ngFor="let p of partenaires">
-   {{p.prenom}}
-  </li>
-</ul>
+<!-- 
+
+<table id="example" class="display" style="width:100%"  >
+  <thead *ngFor="let p of partenaires">
+    <tr >
+      <th>Prenom</th>
+      <th>Nom</th>
+      <th>date de naissance</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{p.prenom}}.{{p.nom}}.{{p.adresse}}</td>
+
+    </tr>
+  </tbody>
+</table> -->
+
+<table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th class="th-sm">id</th>
+      <th class="th-sm">Ninea</th>
+      <th class="th-sm">Raison_Sociale</th>
+      <th class="th-sm">Prenom</th>
+      <th class="th-sm">Nom</th>
+      <th class="th-sm">Adresse</th>
+      <th class="th-sm">Téléphone</th>
+      <th class="th-sm">Email</th>
+      <th class="th-sm">Roles</th>
+      <th class="th-sm">statut</th>
+      <th class="th-sm">Modifier</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of partenaires">
+      <td>{{p.id}}</td>
+      <td>{{p.ninea}}</td>
+      <td>{{p.raisonSocaile}}</td>
+      <td>{{p.prenom}}</td>
+      <td>{{p.nom}}</td>
+      <td>{{p.adresse}}</td>
+      <td>{{p.telephone}}</td>
+      <td>{{p.email}}</td>
+      <td>{{p.roles}}</td>
+      <td>{{p.statut}}</td>
+      <td><i class="fa fa-edit"></i></td>
+    </tr>
+  </tbody>
+</table>
