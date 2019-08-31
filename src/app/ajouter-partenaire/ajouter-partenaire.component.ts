@@ -8,7 +8,7 @@ import { AjouterpartenaireService } from '../ajouterpartenaire.service';
   providers:[AjouterpartenaireService],
 })
 export class AjouterPartenaireComponent implements OnInit {
-  imageUrl: string = "/assets/Images/symfony-4.png";
+  imageUrl: string = "/assets/Images/user.png";
   fileToUpload: File = null;
   constructor(private ajoutpartService : AjouterpartenaireService) { }
 
@@ -50,7 +50,7 @@ export class AjouterPartenaireComponent implements OnInit {
     ninea         = null;
     telephone     = null;
     image.value   = null;
-    this.imageUrl = "/assets/Images/symfony-4.png";
+    this.imageUrl = "/assets/Images/user.png";
      }
    );
   
