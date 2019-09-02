@@ -10,16 +10,18 @@ import { ListerPartenaireService } from '../lister-partenaire.service';
 })
 export class ListerPartenaireComponent implements OnInit {
 
+  dtoptions: DataTables.Settings={};
   constructor(private Listepartenaire:ListerPartenaireService) { }
   partenaires;
-  ngOnInit() {
-    this.Listepartenaire.getlistepartenaires().subscribe(data=>{
+  ngOnInit() :void{
+      this.Listepartenaire.getlistepartenaires().subscribe(data=>{
       this.partenaires=data;
-      // console.log(data);
-      // console.log('okkk');
-      //alert('ok');
-    },err=>{
+
+     },err=>{
       console.log(err);
-    })
+     })
+    // this.dtoptions={
+    //   pagingType: 'full_numbers'
+    // }
   }
 }

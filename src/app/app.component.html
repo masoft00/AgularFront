@@ -16,7 +16,9 @@
       <h5 class="sidenav-heading"></h5>
       <ul id="side-main-menu" class="side-menu list-unstyled">
         <li><a routerLink="/ajouterPartenaire"><i class="icon-home"></i>Ajouter Partenaire</a></li>
-        <li><a routerLink="/listepartenaire"><i class="icon-form"></i>Liste Partenaire</a></li>
+        <li><a routerLink="/ajouterCaissier"><i class="icon-home"></i>Ajouter Caissier</a></li>
+        <li><a routerLink="/"> <i class="icon-interface-windows"></i>Ajouter un Compte</a></li>
+        <li><a routerLink="/listepartenaire"><i class="icon-form"></i>Liste Partenaires</a></li>
         <li><a routerLink="/"> <i class="fa fa-bar-chart"></i>Ajouter Depot</a></li>
         <li><a routerLink="/"> <i class="icon-grid"></i>Envoi</a></li>
         <li><a routerLink="/"> <i class="icon-interface-windows"></i>Retrait</a></li>
@@ -24,7 +26,6 @@
     </div>
 
   </div>
-
 </nav>
 <div class="page">
   <!-- navbar-->
@@ -32,10 +33,15 @@
     <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-holder d-flex align-items-center justify-content-between">
-          <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a
-              href="index.html" class="navbar-brand">
-              <div class="brand-text d-none d-md-inline-block"><span></span><strong
-                  class="text-primary">Dashboard</strong></div>
+          <div class="navbar-header">
+            <a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a>
+            <a href="index.html" class="navbar-brand">
+              <div class="brand-text d-none d-md-inline-block">
+                <span></span>
+                <strong class="text-primary">
+                  XALLIS TRANSFERT
+                </strong>
+              </div>
             </a></div>
           <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
             <!-- Notifications dropdown-->
@@ -54,14 +60,8 @@
 
   <!-- Header Section-->
   <section class="dashboard-header section-padding col">
-
     <div class="container-fluid">
-
       <router-outlet></router-outlet>
-      <div class="row d-flex align-items-md-stretch">
-
-
-      </div>
     </div>
   </section>
 

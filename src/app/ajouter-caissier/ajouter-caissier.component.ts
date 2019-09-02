@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { AjouterpartenaireService } from '../ajouterpartenaire.service';
 import { Router } from '@angular/router';
+import { AjouterCaissierService } from '../ajouter-caissier.service';
 
 @Component({
-  selector: 'app-ajouter-partenaire',
-  templateUrl: './ajouter-partenaire.component.html',
-  styleUrls: ['./ajouter-partenaire.component.css'],
-  providers:[AjouterpartenaireService],
+  selector: 'app-ajouter-caissier',
+  templateUrl: './ajouter-caissier.component.html',
+  styleUrls: ['./ajouter-caissier.component.css']
 })
-export class AjouterPartenaireComponent implements OnInit {
-  imageUrl: string = "/assets/Images/user.png";
+export class AjouterCaissierComponent implements OnInit {
+ imageUrl: string = "/assets/Images/user.png";
   fileToUpload: File = null;
-  constructor(private ajoutpartService : AjouterpartenaireService,private router:Router) { }
+  constructor(private ajoutCaissierService : AjouterCaissierService,private router:Router) { }
 
   ngOnInit() {
   }
@@ -28,16 +27,14 @@ export class AjouterPartenaireComponent implements OnInit {
     reader.readAsDataURL(this.fileToUpload);
   }
 
-    OnSubmit(username,prenom,nom,image,adresse,email,telephone,raisonSociale,ninea,password){
-   this.ajoutpartService.postFile(
+    OnSubmit(username,prenom,nom,image,adresse,email,telephone,password){
+   this.ajoutCaissierService .postFile(
      username.value,
      prenom.value,
      nom.value,
      adresse.value,
      email.value,
      telephone.value,
-     raisonSociale.value,
-     ninea.value,
      password.value,
      this.fileToUpload).subscribe(
      data =>{
@@ -47,13 +44,11 @@ export class AjouterPartenaireComponent implements OnInit {
     username      = null;
     password      = null;
     email         = null;
-    raisonSociale = null;
-    ninea         = null;
     telephone     = null;
     image         = null;
     this.imageUrl = "/assets/Images/user.png";
     this.router.navigateByUrl('/listepartenaire');
      }
    );
-  }   
+  }  
 }

@@ -1,41 +1,40 @@
-<section class="forms">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="card">
-          <div class="card-header d-flex align-items-center">
-            <h4>LISTE DES PARTENAIRE</h4>
-          </div>
-          <div class="card-body">
-            <table datatable class="row-border hover">
-              <thead>
-                <tr>
-                  <th>id</th>
-                  <th>Prenom</th>
-                  <th>Nom</th>
-                  <th>Adresse</th>
-                  <th>Téléphone</th>
-                  <th>Email</th>
-                  <th>statut</th>
-                  <th>Modifier</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let p of partenaires">
-                  <td>{{p.id}}</td>
-                  <td>{{p.prenom}}</td>
-                  <td>{{p.nom}}</td>
-                  <td>{{p.adresse}}</td>
-                  <td>{{p.telephone}}</td>
-                  <td>{{p.email}}</td>
-                  <td>{{p.statut}}</td>
-                  <td><i class="fa fa-edit"></i></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header d-flex align-items-center">
+          <h4>LISTE DES PARTENAIRE</h4>
+        </div>
+        <div class="card-body">
+          <table datatable class="row-border hover">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Téléphone</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>statut</th>
+                <th>Modifier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of partenaires">
+                <td align="center">{{p.id}}</td>
+                <td align="center">{{p.prenom}}</td>
+                <td align="center">{{p.nom}}</td>
+                <td align="center">{{p.adresse}}</td>
+                <td align="center">{{p.email}}</td>
+                <td align="center">{{p.roles}}</td>
+                <td align="center"><i class="fa fa-unlock-alt"><br>{{p.statut}}</i></td>
+
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>

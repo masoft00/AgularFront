@@ -9,6 +9,9 @@ import { ListerPartenaireComponent } from './lister-partenaire/lister-partenaire
 import { AjouterPartenaireComponent } from './ajouter-partenaire/ajouter-partenaire.component';
 import { LoginComponent } from './login/login.component';
 import { DataTablesModule } from 'angular-datatables';
+import { ListerUtilisateurComponent } from './lister-utilisateur/lister-utilisateur.component';
+import { AjouterCaissierComponent } from './ajouter-caissier/ajouter-caissier.component';
+// import { AjouterCaissierComponent } from './ajouter-caissier/ajouter-caissier.component';
 
 
 
@@ -18,7 +21,10 @@ import { DataTablesModule } from 'angular-datatables';
     LoginComponent,
     AjouterPartenaireComponent,
     ListerPartenaireComponent,
-    AjouterPartenaireComponent
+    AjouterPartenaireComponent,
+    ListerUtilisateurComponent,
+    AjouterCaissierComponent,
+    // AjouterCaissierComponent
   ],
   imports: [
     BrowserModule,
